@@ -1,14 +1,16 @@
 @echo off
-cd /d C:\Users\Lacroix\github-classroom\hnusteasyweibo-Lacroix425
-echo Starting Weibo Platform...
+set JAVA_HOME=C:\Program Files\Java\jdk-17
+set PATH=%JAVA_HOME\bin;C:\apache-maven-3.9.6\bin;%PATH%
 
-echo [1] Starting Backend...
-start cmd /c "set JAVA_HOME=C:\Program Files\Java\jdk-17 && cd /d C:\Users\Lacroix\github-classroom\hnusteasyweibo-Lacroix425\weibo-backend && mvn spring-boot:run"
+echo Starting Weibo Platform Backend...
+cd /d C:\Users\Lacroix\github-classroom\hnusteasyweibo-Lacroix425\weibo-backend
+start "Backend" cmd /c "mvn spring-boot:run"
 
-timeout /t 18 /nobreak >nul
+timeout /t 20 /nobreak >nul
 
-echo [2] Starting Frontend...
-start cmd /c "cd /d C:\Users\Lacroix\github-classroom\hnusteasyweibo-Lacroix425\weibo-frontend && D:\nodejs\npm.cmd run dev"
+echo Starting Frontend...
+cd /d C:\Users\Lacroix\github-classroom\hnusteasyweibo-Lacroix425\weibo-frontend
+start "Frontend" cmd /c "D:\nodejs\npm.cmd run dev"
 
 echo.
 echo Done! http://localhost:5173
