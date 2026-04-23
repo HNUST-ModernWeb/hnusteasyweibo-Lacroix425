@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch WeiboApplication",
+            "request": "launch",
+            "mainClass": "com.weibo.WeiboApplication",
+            "projectName": "weibo-backend",
+            "args": "",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Debug WeiboApplication",
+            "request": "launch",
+            "mainClass": "com.weibo.WeiboApplication",
+            "projectName": "weibo-backend",
+            "args": "",
+            "console": "integratedTerminal",
+            "sourcePaths": [
+                "src/main/java"
+            ]
+        }
+    ]
+}
